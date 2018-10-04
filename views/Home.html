@@ -2,21 +2,55 @@
 <html lang="en">
 <head>
     <title>Energy Visual</title>
-	<!--<link rel="stylesheet" href="../public/styles/style.css">-->
-	<link rel="stylesheet" href="/cdn/styles/style.css">
-	<!--<p><img src="wits-logo.jpg" alt="Wits logo" style="float:left;width:150px;height:150px;">-->
-	<p><img src="/cdn/images/wits-logo.jpg" alt="Wits logo" style="float:left;width:150px;height:150px;">
-The image will float to the left of the text.</p>
-<meta charset="utf-8" />
+
+    <!--<link rel="stylesheet" href="../public/styles/style.css">-->
+    <link rel="stylesheet" href="/cdn/styles/style.css">
+
+    <!--<img src="wits-logo.jpg" alt="Wits logo" style="float:left;width:150px;height:150px;">-->
+    <img src="/cdn/images/wits-logo.jpg" alt="Wits logo" style="float:left;width:150px;height:150px;">
+
+        <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-firestore.js"></script>
+
+    <meta charset="utf-8" />
 </head>
 <hr>
 <body>
-    <h1>Wits Energy <br />Visualisation</h1>
+    <h1>Wits Energy<br />Visualisation</h1>
 <hr>
     <button type="button" id="updateButton" class="updateButton">Update</button>
-    <!--<script src="../public/scripts/home.js"></script>-->
-   <script src="/cdn/scripts/home.js"></script>
+
  <hr>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCro6nG882rpBnPBCjuGZ79ZNg7Xe9lFdY",
+            authDomain: "design-project-b62c0.firebaseapp.com",
+            databaseURL: "https://design-project-b62c0.firebaseio.com",
+            projectId: "design-project-b62c0",
+            storageBucket: "design-project-b62c0.appspot.com",
+            messagingSenderId: "204576430883"
+        };
+        firebase.initializeApp(config);
+        const db = firebase.firestore();
+        db.settings({timestampsInSnapshots: true});
+    </script>
+    <!--Start of visualisations-->
+
+    <button type="button" id="firstVisual" class="visualButtons">Visual 1</button>
+    <button type="button" id="secondVisual" class="visualButtons">Visual 2</button>
+    <button type="button" id="thirdVisual" class="visualButtons">Visual 3</button>
+
+
+<hr>
+
+
+<ul id="Building" class="building"></ul>
+
+
+
+    <script src="/cdn/scripts/home.js"></script>
+    <!--<script src="../public/scripts/home.js"></script>-->
 
 </body>
 

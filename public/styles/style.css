@@ -13,6 +13,17 @@ h1 {
 
 .updateButton {
     background-color: blue; /* Green */
+    border: red;
+    color: white;
+    padding: 15px 32px;
+    text-align: left-side
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.visualButtons {
+    background-color: blue; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -20,4 +31,8 @@ h1 {
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
+}
+
+ul.building{
+    color: #fff;
 }
